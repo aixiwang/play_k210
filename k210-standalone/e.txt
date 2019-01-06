@@ -1,0 +1,8 @@
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+make micropython.bin 
+Use make V=1 or set BUILD_VERBOSE in your environment to increase build verbosity.
+make[1]: Entering directory `/home/test/k210/MaixPy/ports/k210-standalone'
+GEN build/genhdr/qstrdefs.collected.h
+QSTR not updated
+CC mpy-mod/machine/machine_st7789.c
+make[1]: Leaving directory `/home/test/k210/MaixPy/ports/k210-standalone'

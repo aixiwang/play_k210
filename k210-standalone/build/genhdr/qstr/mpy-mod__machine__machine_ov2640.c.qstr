@@ -1,0 +1,5 @@
+Q(__del__)
+Q(deinit)
+Q(init)
+Q(get_image)
+Q(ov2640)

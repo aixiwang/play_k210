@@ -1,0 +1,88 @@
+build/py/emitinlinethumb.o: ../../py/emitinlinethumb.c \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_default_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/features.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_newlib_version.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_intsup.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdio.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/newlib.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/config.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/ieeefp.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/cdefs.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stddef.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdarg.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/reent.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/lock.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/endian.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_endian.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/select.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_sigset.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_timeval.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/timespec.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_timespec.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_pthreadtypes.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/sched.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/stdio.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/string.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_locale.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/string.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/assert.h \
+ ../../py/emit.h ../../py/lexer.h ../../py/mpconfig.h mpconfigport.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdbool.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/alloca.h \
+ ../../py/qstr.h ../../py/misc.h build/genhdr/qstrdefs.generated.h \
+ ../../py/reader.h ../../py/obj.h ../../py/mpprint.h ../../py/runtime0.h \
+ ../../py/scope.h ../../py/parse.h ../../py/emitglue.h \
+ ../../py/asmthumb.h ../../py/asmbase.h
+../../py/emitinlinethumb.c :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_default_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/features.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_newlib_version.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_intsup.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdio.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/newlib.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/config.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/ieeefp.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/cdefs.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stddef.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdarg.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/reent.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/lock.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/endian.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_endian.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/select.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_sigset.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_timeval.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/timespec.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_timespec.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_pthreadtypes.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/sched.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/stdio.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/string.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_locale.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/string.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/assert.h :
+ ../../py/emit.h ../../py/lexer.h ../../py/mpconfig.h mpconfigport.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdbool.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/alloca.h :
+ ../../py/qstr.h ../../py/misc.h build/genhdr/qstrdefs.generated.h :
+ ../../py/reader.h ../../py/obj.h ../../py/mpprint.h ../../py/runtime0.h :
+ ../../py/scope.h ../../py/parse.h ../../py/emitglue.h :
+ ../../py/asmthumb.h ../../py/asmbase.h :

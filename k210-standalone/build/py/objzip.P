@@ -1,0 +1,68 @@
+build/py/objzip.o: ../../py/objzip.c \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdlib.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/ieeefp.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/newlib.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_newlib_version.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/config.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/features.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stddef.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/reent.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_default_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/lock.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/cdefs.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/stdlib.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/alloca.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/assert.h \
+ ../../py/objtuple.h ../../py/obj.h ../../py/mpconfig.h mpconfigport.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_intsup.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_stdint.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdbool.h \
+ ../../py/misc.h ../../py/qstr.h build/genhdr/qstrdefs.generated.h \
+ ../../py/mpprint.h ../../py/runtime0.h ../../py/runtime.h \
+ ../../py/mpstate.h ../../py/mpthread.h ../../py/nlr.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include-fixed/limits.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include-fixed/syslimits.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/limits.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/setjmp.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/setjmp.h \
+ ../../py/objlist.h ../../py/objexcept.h ../../py/pystack.h
+../../py/objzip.c :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdlib.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/ieeefp.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/newlib.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_newlib_version.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/config.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/features.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stddef.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/reent.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_default_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/lock.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/cdefs.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/stdlib.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/alloca.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/assert.h :
+ ../../py/objtuple.h ../../py/obj.h ../../py/mpconfig.h mpconfigport.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_intsup.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_stdint.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdbool.h :
+ ../../py/misc.h ../../py/qstr.h build/genhdr/qstrdefs.generated.h :
+ ../../py/mpprint.h ../../py/runtime0.h ../../py/runtime.h :
+ ../../py/mpstate.h ../../py/mpthread.h ../../py/nlr.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include-fixed/limits.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include-fixed/syslimits.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/limits.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/setjmp.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/setjmp.h :
+ ../../py/objlist.h ../../py/objexcept.h ../../py/pystack.h :

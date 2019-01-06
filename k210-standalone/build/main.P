@@ -1,0 +1,182 @@
+build/main.o: main.c \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdio.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/newlib.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_newlib_version.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/config.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/ieeefp.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/features.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/cdefs.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_default_types.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stddef.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdarg.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/reent.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/lock.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/endian.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_endian.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/select.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_sigset.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_timeval.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/timespec.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_timespec.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_pthreadtypes.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/sched.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/stdio.h \
+ kendryte-standalone-sdk/lib/bsp/include/sleep.h \
+ kendryte-standalone-sdk/lib/bsp/include/encoding.h \
+ kendryte-standalone-sdk/lib/drivers/include/clint.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_intsup.h \
+ kendryte-standalone-sdk/lib/bsp/include/platform.h \
+ kendryte-standalone-sdk/lib/bsp/include/syscalls.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/syscall.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/stat.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/time.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/time.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_locale.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/times.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/time.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_time.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/timeb.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/errno.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/errno.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/string.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/string.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/unistd.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/unistd.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/utime.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/utime.h \
+ kendryte-standalone-sdk/lib/bsp/include/encoding.h ../../py/compile.h \
+ ../../py/lexer.h ../../py/mpconfig.h mpconfigport.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdbool.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/alloca.h \
+ ../../py/qstr.h ../../py/misc.h build/genhdr/qstrdefs.generated.h \
+ ../../py/reader.h ../../py/obj.h ../../py/mpprint.h ../../py/runtime0.h \
+ ../../py/parse.h ../../py/emitglue.h ../../py/runtime.h \
+ ../../py/mpstate.h ../../py/mpthread.h ../../py/nlr.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include-fixed/limits.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include-fixed/syslimits.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/limits.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/assert.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/setjmp.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/setjmp.h \
+ ../../py/objlist.h ../../py/objexcept.h ../../py/objtuple.h \
+ ../../py/pystack.h ../../py/repl.h ../../py/gc.h ../../py/mperrno.h \
+ ../../lib/utils/pyexec.h \
+ kendryte-standalone-sdk/lib/drivers/include/fpioa.h \
+ kendryte-standalone-sdk/lib/drivers/include/gpio.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/inttypes.h \
+ kendryte-standalone-sdk/lib/drivers/include/gpio_common.h \
+ ../../lib/mp-readline/readline.h ../../lib/utils/interrupt_char.h \
+ kendryte-standalone-sdk/lib/drivers/include/timer.h \
+ kendryte-standalone-sdk/lib/drivers/include/sysctl.h \
+ board-drivers/include/w25qxx.h \
+ kendryte-standalone-sdk/lib/drivers/include/plic.h \
+ kendryte-standalone-sdk/lib/drivers/include/uarths.h \
+ kendryte-standalone-sdk/lib/drivers/include/plic.h \
+ board-drivers/include/lcd.h spiffs-port/include/spiffs-port.h \
+ spiffs/src/spiffs.h spiffs-port/include/spiffs_config.h \
+ spiffs-port/include/params_test.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdlib.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/stdlib.h \
+ spiffs-port/include/spiffs_configport.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/malloc.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/malloc.h
+main.c :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdio.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/newlib.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_newlib_version.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/config.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/ieeefp.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/features.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/cdefs.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_default_types.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stddef.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdarg.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/reent.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_ansi.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/lock.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/endian.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_endian.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/select.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_sigset.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_timeval.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/timespec.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_timespec.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_pthreadtypes.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/sched.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/stdio.h :
+ kendryte-standalone-sdk/lib/bsp/include/sleep.h :
+ kendryte-standalone-sdk/lib/bsp/include/encoding.h :
+ kendryte-standalone-sdk/lib/drivers/include/clint.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_intsup.h :
+ kendryte-standalone-sdk/lib/bsp/include/platform.h :
+ kendryte-standalone-sdk/lib/bsp/include/syscalls.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/syscall.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/stat.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/time.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/time.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_locale.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/times.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/time.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_time.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/timeb.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/errno.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/errno.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/string.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/string.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/unistd.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/unistd.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/utime.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/utime.h :
+ kendryte-standalone-sdk/lib/bsp/include/encoding.h ../../py/compile.h :
+ ../../py/lexer.h ../../py/mpconfig.h mpconfigport.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdbool.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/alloca.h :
+ ../../py/qstr.h ../../py/misc.h build/genhdr/qstrdefs.generated.h :
+ ../../py/reader.h ../../py/obj.h ../../py/mpprint.h ../../py/runtime0.h :
+ ../../py/parse.h ../../py/emitglue.h ../../py/runtime.h :
+ ../../py/mpstate.h ../../py/mpthread.h ../../py/nlr.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include-fixed/limits.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include-fixed/syslimits.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/limits.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/assert.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/setjmp.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/setjmp.h :
+ ../../py/objlist.h ../../py/objexcept.h ../../py/objtuple.h :
+ ../../py/pystack.h ../../py/repl.h ../../py/gc.h ../../py/mperrno.h :
+ ../../lib/utils/pyexec.h :
+ kendryte-standalone-sdk/lib/drivers/include/fpioa.h :
+ kendryte-standalone-sdk/lib/drivers/include/gpio.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/inttypes.h :
+ kendryte-standalone-sdk/lib/drivers/include/gpio_common.h :
+ ../../lib/mp-readline/readline.h ../../lib/utils/interrupt_char.h :
+ kendryte-standalone-sdk/lib/drivers/include/timer.h :
+ kendryte-standalone-sdk/lib/drivers/include/sysctl.h :
+ board-drivers/include/w25qxx.h :
+ kendryte-standalone-sdk/lib/drivers/include/plic.h :
+ kendryte-standalone-sdk/lib/drivers/include/uarths.h :
+ kendryte-standalone-sdk/lib/drivers/include/plic.h :
+ board-drivers/include/lcd.h spiffs-port/include/spiffs-port.h :
+ spiffs/src/spiffs.h spiffs-port/include/spiffs_config.h :
+ spiffs-port/include/params_test.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdlib.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/stdlib.h :
+ spiffs-port/include/spiffs_configport.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/malloc.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/malloc.h :

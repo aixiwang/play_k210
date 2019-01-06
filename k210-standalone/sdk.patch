@@ -1,0 +1,257 @@
+diff -Nur kendryte-standalone-sdk-0.4.1/lib/drivers/dvp.c kendryte-standalone-sdk/lib/drivers/dvp.c
+--- kendryte-standalone-sdk-0.4.1/lib/drivers/dvp.c	2018-10-22 19:38:28.000000000 -0700
++++ kendryte-standalone-sdk/lib/drivers/dvp.c	2018-11-29 23:12:33.488538112 -0800
+@@ -103,7 +103,7 @@
+     return (uint8_t) DVP_SCCB_RDATA_BYTE(dvp->sccb_cfg);
+ }
+ 
+-static void dvp_reset(void)
++void dvp_reset(void)
+ {
+     /* First power down */
+     dvp->cmos_cfg |= DVP_CMOS_POWER_DOWN;
+diff -Nur kendryte-standalone-sdk-0.4.1/lib/drivers/include/dvp.h kendryte-standalone-sdk/lib/drivers/include/dvp.h
+--- kendryte-standalone-sdk-0.4.1/lib/drivers/include/dvp.h	2018-10-22 19:38:28.000000000 -0700
++++ kendryte-standalone-sdk/lib/drivers/include/dvp.h	2018-11-29 23:12:33.492538154 -0800
+@@ -244,6 +244,9 @@
+  */
+ void dvp_set_output_enable(dvp_output_mode_t index, int enable);
+ 
++void dvp_reset(void);
++
++
+ #ifdef __cplusplus
+ }
+ #endif
+diff -Nur kendryte-standalone-sdk-0.4.1/lib/drivers/include/timer.h kendryte-standalone-sdk/lib/drivers/include/timer.h
+--- kendryte-standalone-sdk-0.4.1/lib/drivers/include/timer.h	2018-10-22 19:38:28.000000000 -0700
++++ kendryte-standalone-sdk/lib/drivers/include/timer.h	2018-11-29 23:12:33.492538154 -0800
+@@ -120,7 +120,26 @@
+  * @param[in]   enable      Enable or disable
+  *
+  */
++ 
++void timer_enable(timer_device_number_t timer_number, timer_channel_number_t channel);
++void timer_disable(timer_device_number_t timer_number, timer_channel_number_t channel);
++
++void timer_set_mode(timer_device_number_t timer_number, timer_channel_number_t channel, uint32_t mode);
+ void timer_set_enable(timer_device_number_t timer_number, timer_channel_number_t channel, uint32_t enable);
++void timer_set_clock_div(timer_device_number_t timer_number, uint32_t div);
++void timer_set_reload(timer_device_number_t timer_number, timer_channel_number_t channel, uint32_t count);
++
++uint32_t timer_get_reload(timer_device_number_t timer_number, timer_channel_number_t channel);
++uint32_t timer_get_count(timer_device_number_t timer_number, timer_channel_number_t channel);
++
++
++void timer_enable_interrupt(timer_device_number_t timer_number, timer_channel_number_t channel);
++void timer_channel_clear_interrupt(timer_device_number_t timer_number, timer_channel_number_t channel);
++
++
++
++
++
+ 
+ #ifdef __cplusplus
+ }
+diff -Nur kendryte-standalone-sdk-0.4.1/lib/drivers/include/uart.h kendryte-standalone-sdk/lib/drivers/include/uart.h
+--- kendryte-standalone-sdk-0.4.1/lib/drivers/include/uart.h	2018-10-22 19:38:28.000000000 -0700
++++ kendryte-standalone-sdk/lib/drivers/include/uart.h	2018-11-29 23:12:33.496538195 -0800
+@@ -120,7 +120,7 @@
+ 
+ typedef enum _uart_bitwidth
+ {
+-    UART_BITWIDTH_5BIT = 0,
++    UART_BITWIDTH_5BIT = 5,
+     UART_BITWIDTH_6BIT,
+     UART_BITWIDTH_7BIT,
+     UART_BITWIDTH_8BIT,
+@@ -128,7 +128,7 @@
+ 
+ typedef enum _uart_stopbit
+ {
+-    UART_STOP_1,
++    UART_STOP_1 = 1,
+     UART_STOP_1_5,
+     UART_STOP_2
+ } uart_stopbit_t;
+@@ -188,6 +188,9 @@
+  */
+ void uart_config(uart_device_number_t channel, uint32_t baud_rate, uart_bitwidth_t data_width, uart_stopbit_t stopbit, uart_parity_t parity);
+ 
++size_t uart_ringbuf_length(uart_device_number_t channel);
++
++
+ #ifdef __cplusplus
+ }
+ #endif
+diff -Nur kendryte-standalone-sdk-0.4.1/lib/drivers/include/uarths.h kendryte-standalone-sdk/lib/drivers/include/uarths.h
+--- kendryte-standalone-sdk-0.4.1/lib/drivers/include/uarths.h	2018-10-22 19:38:28.000000000 -0700
++++ kendryte-standalone-sdk/lib/drivers/include/uarths.h	2018-11-29 23:12:33.496538195 -0800
+@@ -78,7 +78,15 @@
+ #define UARTHS_IP_TXWM    (0x01)
+ #define UARTHS_IP_RXWM    (0x02)
+ /* clang-format on */
+-
++#define RING_BUFF_LEN 1024U
++typedef struct _ring_buff_t
++{
++    size_t head;
++    size_t tail;
++    size_t length;
++    int flag;
++    char ring_buff[RING_BUFF_LEN];
++} ring_buff_t;
+ typedef struct _uarths_txdata
+ {
+     /* Bits [7:0] is data */
+@@ -180,8 +188,8 @@
+ 
+ typedef enum _uarths_stopbit
+ {
+-    UART_STOP_1,
+-    UART_STOP_2
++    UARTHS_STOP_1 = 1,
++    UARTHS_STOP_2
+ } uarths_stopbit_t;
+ 
+ extern volatile uarths_t *const uarths;
+@@ -285,6 +293,12 @@
+  */
+ void uarths_set_interrupt_cnt(uarths_interrupt_mode_t interrupt_mode, uint8_t cnt);
+ 
++int on_irq_uarths_recv(void *param);
++
++int read_ringbuff(char *rdata, size_t len);
++int write_ringbuff(uint8_t rdata);
++
++
+ #ifdef __cplusplus
+ }
+ #endif
+diff -Nur kendryte-standalone-sdk-0.4.1/lib/drivers/uart.c kendryte-standalone-sdk/lib/drivers/uart.c
+--- kendryte-standalone-sdk-0.4.1/lib/drivers/uart.c	2018-10-22 19:38:28.000000000 -0700
++++ kendryte-standalone-sdk/lib/drivers/uart.c	2018-11-29 23:12:33.496538195 -0800
+@@ -19,6 +19,9 @@
+ #include "uart.h"
+ #include "utils.h"
+ #include "atomic.h"
++#include "lib/utils/interrupt_char.h"
++
++extern int mp_interrupt_char;
+ 
+ #define __UART_BRATE_CONST  16
+ 
+@@ -29,7 +32,7 @@
+     (volatile uart_t*)UART3_BASE_ADDR
+ };
+ 
+-#define RING_BUFF_LEN 64U
++#define RING_BUFF_LEN 1024U
+ 
+ typedef struct _ring_buff_t
+ {
+@@ -41,6 +44,12 @@
+ 
+ ring_buff_t *ring_recv[3] = {NULL, NULL, NULL};
+ 
++size_t uart_ringbuf_length(uart_device_number_t channel)
++{
++	ring_buff_t *rb = ring_recv[channel];
++	return rb->length;
++}
++
+ static int write_ringbuff(uint8_t channel, uint8_t rdata)
+ {
+     ring_buff_t *rb = ring_recv[channel];
+diff -Nur kendryte-standalone-sdk-0.4.1/lib/drivers/uarths.c kendryte-standalone-sdk/lib/drivers/uarths.c
+--- kendryte-standalone-sdk-0.4.1/lib/drivers/uarths.c	2018-10-22 19:38:28.000000000 -0700
++++ kendryte-standalone-sdk/lib/drivers/uarths.c	2018-11-29 23:12:33.496538195 -0800
+@@ -18,8 +18,63 @@
+ #include "uarths.h"
+ #include "sysctl.h"
+ #include "encoding.h"
++#include "atomic.h"
++#include "malloc.h"
++
++#include "lib/utils/interrupt_char.h"
+ 
+ volatile uarths_t *const uarths = (volatile uarths_t *)UARTHS_BASE_ADDR;
++int pos = 0;
++
++extern int mp_interrupt_char;
++
++ring_buff_t *ring_recv_hs = NULL;
++
++int write_ringbuff(uint8_t rdata)
++{
++    ring_buff_t *rb = ring_recv_hs;
++
++    if (rb->length >= RING_BUFF_LEN)
++    {
++        return -1;
++    }
++    rb->ring_buff[rb->tail] = rdata;
++    rb->tail = (rb->tail + 1) % RING_BUFF_LEN;
++    atomic_add(&rb->length, 1);
++    ring_recv_hs->flag = 1;
++    return ;
++}
++
++int read_ringbuff(char *rdata, size_t len)
++{
++    ring_buff_t *rb = ring_recv_hs;
++    size_t cnt = 0;
++    while((len--) && rb->length)
++    {
++        *(rdata++) = rb->ring_buff[rb->head];
++        rb->head = (rb->head + 1) % RING_BUFF_LEN;
++        atomic_add(&rb->length, -1);
++        cnt++;
++    }
++    ring_recv_hs->flag = 0;
++    return cnt;
++}
++
++int on_irq_uarths_recv(void *param)
++{
++
++	pos++;
++	uarths_rxdata_t recv = uarths->rxdata;
++	if((uint8_t)(recv.data & 0xFF) == (uint8_t)mp_interrupt_char)
++		mp_keyboard_interrupt();
++	else
++	{
++		while(recv.empty);
++		write_ringbuff(((uint8_t)(recv.data & 0xFF)));
++	}
++	return 0;
++}
++
+ 
+ typedef struct _uarths_context
+ {
+@@ -148,7 +203,6 @@
+             return -1;
+     return 0;
+ }
+-
+ void uarths_init(void)
+ {
+     uint32_t freq = sysctl_clock_get_freq(SYSCTL_CLOCK_CPU);
+@@ -164,8 +218,16 @@
+     uarths->ip.rxwm = 1;
+     uarths->ie.txwm = 0;
+     uarths->ie.rxwm = 1;
++
++        ring_buff_t *rb = malloc(sizeof(ring_buff_t));
++    rb->head = 0;
++    rb->tail = 0;
++    rb->length = 0;
++    ring_recv_hs = rb;
++    ring_recv_hs->flag = 0;
+ }
+ 
++
+ void uarths_config(uint32_t baud_rate, uarths_stopbit_t stopbit)
+ {
+     uint32_t freq = sysctl_clock_get_freq(SYSCTL_CLOCK_CPU);

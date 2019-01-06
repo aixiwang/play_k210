@@ -1,0 +1,33 @@
+build/kendryte-standalone-sdk/lib/bsp/printf.o: \
+ kendryte-standalone-sdk/lib/bsp/printf.c \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stddef.h \
+ kendryte-standalone-sdk/lib/bsp/include/printf.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdarg.h \
+ kendryte-standalone-sdk/lib/bsp/include/atomic.h \
+ kendryte-standalone-sdk/lib/drivers/include/uarths.h \
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdint.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_default_types.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/features.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_newlib_version.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_intsup.h \
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_stdint.h \
+ kendryte-standalone-sdk/lib/bsp/include/platform.h \
+ kendryte-standalone-sdk/lib/drivers/include/plic.h \
+ kendryte-standalone-sdk/lib/bsp/include/encoding.h
+ kendryte-standalone-sdk/lib/bsp/printf.c :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stddef.h :
+ kendryte-standalone-sdk/lib/bsp/include/printf.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdarg.h :
+ kendryte-standalone-sdk/lib/bsp/include/atomic.h :
+ kendryte-standalone-sdk/lib/drivers/include/uarths.h :
+ /home/test/k210/toolchain/lib/gcc/riscv64-unknown-elf/7.2.0/include/stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/stdint.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/machine/_default_types.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/features.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/_newlib_version.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_intsup.h :
+ /home/test/k210/toolchain/riscv64-unknown-elf/include/sys/_stdint.h :
+ kendryte-standalone-sdk/lib/bsp/include/platform.h :
+ kendryte-standalone-sdk/lib/drivers/include/plic.h :
+ kendryte-standalone-sdk/lib/bsp/include/encoding.h :
